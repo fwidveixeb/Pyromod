@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 @bot.on_message(filters.private & filters.document)
 async def genStr(bt, message):
   
-  one = await bt.get_messages(message)
+  one = await bt.get_messages(message.chat.id, message.id)
   await message.reply_cached_media(one.document.file_id)
   
   two = await bot.ask(message.chat.id, "Now send me second document.")
