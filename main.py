@@ -5,7 +5,7 @@ from pyrogram import Client, filters
 @bot.on_message(filters.private & filters.command("start"))
 async def genStr(bt, msg):
   
-  hemlo = await message.reply('Hello')
+  hemlo = await msg.reply('Hello')
   api = await bot.ask(message.chat.id, "How are you bruh?")
   await hemlo.edit(api.text)
   
