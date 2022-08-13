@@ -6,7 +6,7 @@ from pyrogram import Client, filters
 async def genStr(bt, msg):
   
   hemlo = await msg.reply('Hello')
-  api = await bot.ask(message.chat.id, "How are you bruh?")
+  api = await bot.ask(msg.chat.id, "How are you bruh?")
   await hemlo.edit(api.text)
   
 if __name__ == "__main__":
