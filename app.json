@@ -1,0 +1,35 @@
+{
+    "name": "String-Session-Generator",
+    "description": "A bot for Generating String Session of Telegram Account mostly for Userbots.",
+    "repository": "https://github.com/AsmSafone/StringSessionGenerator",
+    "keywords": [
+        "string",
+        "session"
+    ],
+    "buildpacks": [{
+    "url": "heroku/python"
+  }],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your bot token, as a string.",
+            "value": "",
+            "required": true
+        },
+        "API_ID": {
+            "description": "Get from https://my.telegram.org",
+            "value": "",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "Get from https://my.telegram.org",
+            "value": "",
+            "required": true
+        }
+    }
+}
